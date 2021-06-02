@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<title>Home</title>
+{% endblock style %}
+
+
+{% block container %}
+
+<section id="home">
+  <div class="middleImgOverlay">
+
+    <img src="{{logo}}" alt="logo" class="img-fluid d-flex justify-content-center align-items-center">
+
+  </div>
+  <div id="carouselHome" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Slide One - Set the background image for this slide in the line below -->
+
+      {% for i in slide %}
+      <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}"
+        style="background-image: url('{{i}}')">
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</section>
+
+
+<!-- service  -->
+
+<section id="welcome">
+  <div class="container pb-5" style="padding-top: 69px;">
+    <div class="pb-5">
+      <h1 class="text-center welcome_header">Welcome to <br> {{company_name}}</h1>
+    </div>
+    <div class="pl-lg-5 pr-lg-5">
+      <div class="pl-lg-5 pr-lg-5">
+        <p class="text-center welcome_text">{{company_description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="page_divider">
+  <div class="page_divider"></div>
+</section>
+<section id="service">
+  <div class="container">
+    <div>
+      <h1 class="text-center pb-4 service_header">Our Service</h1>
+    </div>
+    <div>
+      <p class="text-center service_header" style="font-size: 1.3em;">{{services.description}}</p>
+    </div>
+    <div>
+      <div class="row pt-5">
+
+        {% for i in services.services_list %}
+        <div class="col-lg-6 col-12">
+          <div class="pb-5 pr-lg-3">
+            <div class="card" style="background-color: #0c1e3e;">
+              <div style="border-bottom: 5px solid #fff">
+                <img class="card-img-top" src="{{i.service_image}}" alt="{{i.service_name}}">
+              </div>
+              <div class="card-body text-center service_card_body">
+                <h3 class="card-text pb-3 pt-2">{{i.service_name}}</h3>
+              </div>
+              <div class="text-center">
+                <a href="#" class="btn service_card_btn">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page_divider">
+  <div class="pb_bottom_divider inside_divider"></div>
+</section>
+<!-- Approach -->
+<section id="approach">
+  <div class="container-fluid pb-5">
+    <div class="container">
+      <h2 class="text-center aproach_heading major_portfolio">Our Approach</h2>
+    </div>
+    <div class="row pt-5 justify-content-center">
+
+      {% for i in approaches %}
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="pb-5">
+          <a href="#">
+            <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
+
+              <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
+
+              <div class="card-body text-center" style="padding: 0!important;">
+                <div class="pb-3 pt-4">
+                  <h3 class="card-text approach_card_text">
+                    {{i.name}}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <a href="#" class="btn btn-aproach_last">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- banner -->
+
+<section id="banner">
+  <div class="row m-auto">
+    {% for i in banner%}
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="{{i}}" class="w-100" alt="banner">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="text-center major_portfolio">Portfolio</h2>
+    <div class="row pt-5">
+
+      {% for i in portfolio %}
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="pb-5">
+          <div class="card">
+            <a href="#">
+              <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
+            </a>
+            <div class="card-body text-center">
+              <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;"><a href="#">{{i.name}}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+
+    </div>
+  </div>
+</section>
+
+
+{% block script %}
+
+{% endblock script %}
+
+{% endblock container %}
