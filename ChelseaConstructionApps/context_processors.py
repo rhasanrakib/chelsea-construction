@@ -5,7 +5,8 @@ from . forms import ContactForm
 def contact_view(request):
     #form = ContactForm()
     context = {
-        'footer_logo':'https://via.placeholder.com/500',
+        'header_logo':'/static/images/c-blue-grey.png',
+        'footer_logo':'/static/images/primary-blue-grey-footer.png',
         'address': '''Chelsea Construction Company
                      26 Chilworth Street
                      London, W2 6DT''',

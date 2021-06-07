@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block style %}
-<title>Home</title>
+<title>Home - Chelsea Construction</title>
 {% endblock style %}
 
 
@@ -36,7 +36,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
+  <div class="pb_bottom_inside_divider"></div>
 </section>
 
 
@@ -100,15 +100,12 @@
       <h2 class="text-center aproach_heading major_portfolio">Our Approach</h2>
     </div>
     <div class="row pt-5 justify-content-center">
-
       {% for i in approaches %}
       <div class="col-lg-2 col-md-4 col-sm-6">
         <div class="pb-5">
           <a href="#">
-            <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
-
+            <div class="card pl-lg-2 pr-lg-2" style="border: transparent;background-color: transparent;">
               <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
-
               <div class="card-body text-center" style="padding: 0!important;">
                 <div class="pb-3 pt-4">
                   <h3 class="card-text approach_card_text">
@@ -121,8 +118,6 @@
         </div>
       </div>
       {% endfor %}
-
-
     </div>
     <div class="row text-center">
       <div class="col-12">

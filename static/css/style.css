@@ -12,7 +12,6 @@ a{
 body{
     font-family: 'Questrial', sans-serif;
     line-height: 1.7em;
-    overflow-x: hidden;
 }
 
 .btn{
@@ -120,18 +119,16 @@ body{
     background-size: cover;
 }
 
-
 /* welcome area  */
-#welcome{
-    background: #f3f8ff !important;
-
+.welcome{
+    background-color: #f3f8ff !important;
 }
 .welcome_header{
     font-family: 'Playfair Display', serif;
     font-size: 34px;
     font-weight: 700;
     line-height: 1em;
-    color: #011e41 !important;
+    color: #011e41;
 }
 
 .welcome_text{
@@ -139,8 +136,14 @@ body{
     padding-bottom: 1em;
     padding: 0 30px;
 }
-
+.text-container{
+    min-height: 40px;
+    border-bottom: 2px solid #656570;
+    
+}
 /* carusal */
+
+
 #home {
     position: relative;
     width: 100vw;
@@ -172,7 +175,6 @@ body{
     top: 40%;
     z-index: 1;
 }
-
 
 /* service */
 #service{
@@ -220,9 +222,28 @@ body{
 	height: 100px;
 	z-index: 1;
 }
-
 .inside_divider{
     margin-bottom: -1px;
+}
+/*Divergent Top*/
+.pb_bottom_inside_divider {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmM2Y4ZmYiPjxwYXRoIGQ9Ik0wIDB2MTQwaDEyODBMMCAweiIvPjwvZz48L3N2Zz4=);
+	background-size: 100% 100px;
+	bottom: 0;
+	height: 100px;
+	z-index: 10;
+}
+.pb_bottom_inside_divider {
+	margin-bottom: -1px;
+}
+.pb_bottom_inside_divider, .pb_top_inside_divider {
+	display: block;
+	background-repeat-y: no-repeat;
+	position: absolute;
+	pointer-events: none;
+	width: 100%;
+	left: 0;
+	right: 0;
 }
 /* approach */
 #approach{
@@ -248,10 +269,6 @@ body{
     border: 2px solid transparent!important;
     color: #fff;
 }
-#approach a:hover{
-    text-decoration: none;
-    
-}
 /* banner */
 #banner{
     font-size: 0;
@@ -271,19 +288,12 @@ body{
 	padding-bottom: 0.5em;
 	border-bottom: solid 2px rgba(12,30,62,.125);
 }
-#portfolio a{
-    text-decoration: none;
-    color: rgb(22, 22, 22);
-    font-weight: 500;
-}
+
 /* contact */
 #contact{
     background-color: #0c1e3e;
 }
-#contact a{
-    text-decoration: none;
-    color: #fff;
-}
+
 .major {
 	padding-bottom: 0.5em;
 	border-bottom: solid 2px rgba(255,255,255,.125);
@@ -371,4 +381,8 @@ body{
     padding-top: 15px;
     padding-bottom: 5px;
     font-weight: 500;
+
 }
+
+
+

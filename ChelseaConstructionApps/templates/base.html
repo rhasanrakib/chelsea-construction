@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'images/cropped-c-blue-grey-32x32.png' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{contact_view.header_logo}}" type="image/x-icon">
 
     {% block style %}
 
@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/history.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
 
@@ -31,7 +33,7 @@
             <div>
                 <div id="navlogo" class="flex logo_container">
                     <a class="flex logo_link" href="{% url 'home' %}"><img id="logo"
-                            src="{% static 'images/c-blue-grey.png' %}" alt=""></a>
+                            src="{{contact_view.header_logo}}" alt=""></a>
                 </div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light custom_nav">
                     <span class="d-lg-none">Select Page</span>
@@ -48,12 +50,12 @@
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle" href="{% url 'about' %}" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     About
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Histry</a>
+                                    <a class="dropdown-item" href="{% url 'about' %}#history">History</a>
                                     <a class="dropdown-item" href="#">Our Approach</a>
                                     <a class="dropdown-item" href="#">The Team</a>
                                 </div>
@@ -70,10 +72,10 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Portfolio</a>
+                                <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -176,16 +178,16 @@
                         <a class="nav-link active" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Service</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact</a>
+                        <a class="nav-link" href="{% url 'contact' %}">contact</a>
                     </li>
                 </ul>
             </div>
@@ -209,6 +211,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="{% static 'js/sticky.js' %}"></script>
+    <script src="{% static 'js/jquery.imageScroll.min.js' %}"></script>
     <script>
         //let labels=document.getElementsByTagName('label');
         $("label").hide();

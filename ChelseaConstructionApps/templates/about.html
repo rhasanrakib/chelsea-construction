@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<title>About - Chelsea Construction</title>
+{% endblock style %}
+
+{% block container %}
+<!-- banner carousel-->
+
+<section id="history_banner" class="history_banner"
+  style="background:linear-gradient(rgba(16, 51, 86, 0.5), rgba(16, 51, 86, 0.5)), url({{history_first_banner_pic}});">
+  <div class="container pb-5" style="padding-top: 69px;">
+    <div class="pb-5">
+      <h1 class="text-center welcome_header" style="color: #fff;">About Chelsea Construction Company</h1>
+    </div>
+  </div>
+  <div id="page_divider" style="background: transparent;">
+    <div class="history_page_botom_divider"></div>
+  </div>
+</section>
+<!-- Our history  -->
+
+<section id="history" class="welcome" style="color: rgba(16, 51, 86, 0.5); padding-top: 25px;">
+  <div class="container">
+    <div>
+      <h1 class="text-center pb-4 border_bottom history_header" style="color: #0c1e3e;">Our History</h1>
+    </div>
+    <div>
+      <div class="row pt-5 justify-content-between">
+        <div class="col-lg-6 col-12 pl-lg-0">
+          <div class="pb-5 pr-lg-2">
+            <p class="text-center history_text">Since 1997, Chelsea Construction Company have partnered with
+              homeowners, designers and architects to deliver unrivalled construction, renovation and refurbishment
+              services across London and the Home Counties.</p>
+            <p class="text-center history_text">Offering full project management, our passionate and hugely talented
+              team are recognised for their expertise, professionalism and attention to detail. With a wealth of
+              in-house tradesmen and a trusted supplier network built up over two decades, Chelsea Construction
+              Company offer a complete end-to-end service.</p>
+            <p class="text-center history_text">From luxurious bathrooms to sympathetic renovations, choosing
+              Chelsea
+              Construction Company guarantees an impressive end product that will satisfy for years to come.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 pr-lg-0">
+          <div class="pb-5 pr-lg-1">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+
+                {% for i in slide %}
+                <div class="carousel-item {% if forloop.counter0 == 0 %}active {% endif %}">
+                  <img class="d-block w-100" src="{{i}}" alt="First slide" style="max-height: 450px;">
+                </div>
+                {% endfor %}
+
+
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/GavriiLux_London_20181106_112148_HR.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/GavriiLux_London_20181106_125515_HR.jpg" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- parralax banner -->
+
+
+<div class="rh_parallax"
+  data-image="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/10/120ElginCrescent-10.jpg"
+  data-image-mobile="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/10/120ElginCrescent-10.jpg"
+  data-width="1680" data-height="376.8">
+
+  <div class="page_divider" style="position: relative;"></div>
+
+  <div class="pb_bottom_inside_divider"></div>
+</div>
+
+
+<!-- Approach -->
+<section id="approach" style="background-color:#f3f8ff;">
+  <div class="container-fluid pb-5">
+    <div class="container">
+      <h2 class="text-center aproach_heading major_portfolio">Our Approach</h2>
+      <div class="row justify-content-center pt-5 pb-5">
+        <div class="col-lg-8">
+          <p class="text-center"><span style="color:#103356; font-size:1.2em;">We believe it is important to work
+              closely with clients, architects and designers to achieve the best possible results.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="row pt-5 justify-content-center">
+      {% for i in approaches %}
+      <div class="col-lg-2 col-md-4 col-sm-6">
+        <div class="pb-5">
+          <a href="#">
+            <div class="card pl-lg-2 pr-lg-2" style="border: transparent;background-color: transparent;">
+              <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
+              <div class="card-body text-center" style="padding: 0!important;">
+                <div class="pb-3 pt-4">
+                  <h3 class="card-text approach_card_text">
+                    {{i.name}}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <a href="#" class="btn btn-aproach_last">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="page_divider">
+  <div class="page_divider"></div>
+</section>
+<!-- banner carusal  -->
+<section id="service">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="text-center pb-4 service_header" style="border-bottom: 2px solid rgba(255,255,255,.125);">
+          Testimonials</h1>
+      </div>
+    </div>
+    <div>
+      <div class="row pt-5 pb-5" style="color: #fff">
+        <div class="col-12">
+          <div id="carouselContent" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item text-center p-4 active">
+
+                <p class="text_common">Last year we renovated a 4-bedroom Victorian house in Chelsea. We were
+                  recommended Chelsea Construction by our Architects Powell Tuck Associates and on meeting Andrew
+                  Langridge and his we team felt they would complete the project to our high standards.</p>
+                <p class="text_common">Our house is listed, and we had a difficult task to renovate the property
+                  into
+                  a contemporary residence keeping many of the original features required by the planners.</p>
+                <p class="text_common">The building work has been done with great care and expertise and all
+                  original
+                  features have been restored beautifully. The attention to detail is excellent.</p>
+                <p class="text_common">All the team at Chelsea Construction were incredibly helpful and worked
+                  impeccably. With all building work there will be problems but they were dealt with immediately and
+                  successfully.</p>
+                <p><em>__Client Testimonial</em></p>
+              </div>
+              <div class="carousel-item text-center p-4">
+
+                <p class="text_common">Last year we renovated a 4-bedroom Victorian house in Chelsea. We were
+                  recommended Chelsea Construction by our Architects Powell Tuck Associates and on meeting Andrew
+                  Langridge and his we team felt they would complete the project to our high standards.</p>
+                <p class="text_common">Our house is listed, and we had a difficult task to renovate the property
+                  into
+                  a contemporary residence keeping many of the original features required by the planners.</p>
+                <p class="text_common">The building work has been done with great care and expertise and all
+                  original
+                  features have been restored beautifully. The attention to detail is excellent.</p>
+                <p class="text_common">All the team at Chelsea Construction were incredibly helpful and worked
+                  impeccably. With all building work there will be problems but they were dealt with immediately and
+                  successfully.</p>
+                <p class="text_common"><em>Client Testimonial</em></p>
+              </div>
+              <div class="carousel-item text-center p-4">
+
+                <p class="text_common">Last year we renovated a 4-bedroom Victorian house in Chelsea. We were
+                  recommended Chelsea Construction by our Architects Powell Tuck Associates and on meeting Andrew
+                  Langridge and his we team felt they would complete the project to our high standards.</p>
+                <p class="text_common">Our house is listed, and we had a difficult task to renovate the property
+                  into
+                  a contemporary residence keeping many of the original features required by the planners.</p>
+                <p class="text_common">The building work has been done with great care and expertise and all
+                  original
+                  features have been restored beautifully. The attention to detail is excellent.</p>
+                <p class="text_common">All the team at Chelsea Construction were incredibly helpful and worked
+                  impeccably. With all building work there will be problems but they were dealt with immediately and
+                  successfully.</p>
+                <p class="text_common"><em>__Client Testimonial</em></p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="page_divider">
+  <div class="pb_bottom_divider inside_divider"></div>
+</section>
+
+
+<!-- banner carusal-->
+<section id="banner">
+  <div class="row m-auto">
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="images/Chelsea-Construction-Portrait-images-3.jpg" class="w-100" alt="">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="images/Chelsea-Construction-Portrait-images-3.jpg" class="w-100" alt="">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="images/Chelsea-Construction-Portrait-images-3.jpg" class="w-100" alt="">
+    </div>
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="images/Chelsea-Construction-Portrait-images-3.jpg" class="w-100" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio">
+  <div class="container">
+    <h2 class="text-center major_portfolio">Portfolio</h2>
+    <div class="row pt-5">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="pb-5">
+          <div class="card">
+            <img class="card-img-top" src="images/120ElginCrescent-14.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;">Private Residence | Chelsea
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="pb-5">
+          <div class="card">
+            <img class="card-img-top" src="images/120ElginCrescent-14.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;">Private Residence | Chelsea
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="pb-5">
+          <div class="card">
+            <img class="card-img-top" src="images/120ElginCrescent-14.jpg" alt="Card image cap">
+            <div class="card-body text-center">
+              <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;">Private Residence | Chelsea
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock container %}
+
+
+
+
+
+
+
+{% block script %}
+<script>
+  $('.rh_parallax').imageScroll({
+
+  });
+</script>
+{% endblock script %}

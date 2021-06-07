@@ -1,14 +1,13 @@
 from django.shortcuts import render,HttpResponseRedirect
 from django.contrib import messages
 from . forms import ContactForm
-def home_view(request):
-    context = {
-        'logo': 'https://via.placeholder.com/500',
+context = {
+        'logo': "/static/images/primary-blue-grey-footer.png",
         'slide': [
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
 
         ],
         'company_name': 'Chelsea Construction Company',
@@ -19,62 +18,65 @@ def home_view(request):
             'services_list': [
                 {
                     'service_name': 'Refurbishment & Development',
-                    'service_image': 'https://via.placeholder.com/1500',
+                    'service_image': '/static/images/120ElginCrescent-14.jpg',
                 },
                 {
                     'service_name': 'Maintenance Services',
-                    'service_image': 'https://via.placeholder.com/1500',
+                    'service_image': '/static/images/120ElginCrescent-14.jpg',
                 },
                 {
                     'service_name': 'Deployment Services',
-                    'service_image': 'https://via.placeholder.com/1500',
+                    'service_image': '/static/images/120ElginCrescent-14.jpg',
                 },
             ]
         },
         'approaches':[
             {
                 'name':'Independent & Flexible',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/Icons-Chelsea-Construction-Professional.png'
             },
             {
                 'name':'Attention to Detail ',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/Icons-Chelsea-Construction-Professional.png'
             },
             {
                 'name':'Responsible & Unobtrusive ',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/Icons-Chelsea-Construction-Professional.png'
             },
             {
                 'name':'Professionalism ',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/Icons-Chelsea-Construction-Professional.png'
             },
             {
                 'name':'Full Project Management Service ',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/Icons-Chelsea-Construction-Professional.png'
             }
         ],
         'banner':[
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
-            'https://via.placeholder.com/1500',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
+            '/static/images/Chelsea-Construction-Portrait-images-3.jpg',
         ],
         'portfolio':[
             {
                 'name':'Private Residence | Chelsea',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/120ElginCrescent-14.jpg'
             },
             {
                 'name':'Private Residence | Belgravia',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/120ElginCrescent-14.jpg'
             },
             {
                 'name':'Private Residence | Knightsbridge',
-                'image':'https://via.placeholder.com/300'
+                'image':'/static/images/120ElginCrescent-14.jpg'
             },
             
         ],
+        'history_first_banner_pic':'/static/images/GavriiLux_London_20181106_123456_HR.jpg'
     }
+def home_view(request):
+    
     if request.method == 'POST':
         form = ContactForm(request.POST or None)
         # print(form)
@@ -88,3 +90,10 @@ def home_view(request):
             #return HttpResponseRedirect(request.path_info)
     
     return render(request, "index.html", context)
+
+def about_view(request):
+    return render(request,'about.html',context)
+def contact_view(request):
+    return render(request,'contact.html',context)
+def portfolio_view(request):
+    return render(request,'portfolio.html',context)
