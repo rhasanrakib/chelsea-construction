@@ -8,10 +8,13 @@
 a{
     text-decoration: none;
 }
-
+a:hover{
+    text-decoration: none;
+}
 body{
     font-family: 'Questrial', sans-serif;
     line-height: 1.7em;
+    overflow-x: hidden;
 }
 
 .btn{
@@ -56,6 +59,7 @@ body{
 }
 
 #navlogo.sticky{
+    width:36px;
     height:69px;
     transition: all .3s ease;
 }
@@ -111,16 +115,59 @@ body{
    height: 1em;
 }
 /* banner */
-.banner{
+#carusal_area {
     position: relative;
-    width: 100%;
     height: 100vh;
-    background-image: url(images/120ElginCrescent-14.jpg);
+}
+
+#carusal_area .carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
+#carusal_area .middleImgOverlay {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    
+}
+#carusal_area .middleImgOverlay img{
+    position: relative;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    top: 40%;
+    z-index: 1;
+}
+
+.pb_bottom_inside_divider {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmM2Y4ZmYiPjxwYXRoIGQ9Ik0wIDB2MTQwaDEyODBMMCAweiIvPjwvZz48L3N2Zz4=);
+	background-size: 100% 100px;
+	bottom: 0;
+	height: 100px;
+	z-index: 10;
+}
+.pb_bottom_inside_divider {
+	margin-bottom: -1px;
+}
+.pb_bottom_inside_divider, .pb_top_inside_divider {
+	display: block;
+	background-repeat-y: no-repeat;
+	position: absolute;
+	pointer-events: none;
+	width: 100%;
+	left: 0;
+	right: 0;
+}
+
 /* welcome area  */
-.welcome{
+#welcome{
     background-color: #f3f8ff !important;
 }
 .welcome_header{
@@ -136,18 +183,11 @@ body{
     padding-bottom: 1em;
     padding: 0 30px;
 }
-.text-container{
-    min-height: 40px;
-    border-bottom: 2px solid #656570;
-    
-}
+
 /* carusal */
-
-
 #home {
     position: relative;
     width: 100vw;
-    height: 100vh;
 }
 
 #home .carousel-item {
@@ -160,21 +200,18 @@ body{
     background-size: cover;
 }
 
-#home .middleImgOverlay {
-    position: absolute;
-    margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
-    
-}
-#home .middleImgOverlay img{
-    position: relative;
+#home .middleImg {
     max-width: 200px;
     max-height: 200px;
-    margin: 0 auto;
-    top: 40%;
     z-index: 1;
+    position: absolute;
+    top: 30vh;
+    /*width: 50%;*/
+    left: 40vw;
+    
 }
+
+
 
 /* service */
 #service{
@@ -225,26 +262,6 @@ body{
 .inside_divider{
     margin-bottom: -1px;
 }
-/*Divergent Top*/
-.pb_bottom_inside_divider {
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNmM2Y4ZmYiPjxwYXRoIGQ9Ik0wIDB2MTQwaDEyODBMMCAweiIvPjwvZz48L3N2Zz4=);
-	background-size: 100% 100px;
-	bottom: 0;
-	height: 100px;
-	z-index: 10;
-}
-.pb_bottom_inside_divider {
-	margin-bottom: -1px;
-}
-.pb_bottom_inside_divider, .pb_top_inside_divider {
-	display: block;
-	background-repeat-y: no-repeat;
-	position: absolute;
-	pointer-events: none;
-	width: 100%;
-	left: 0;
-	right: 0;
-}
 /* approach */
 #approach{
     padding-top: 69px;
@@ -266,7 +283,13 @@ body{
 .btn-aproach_last{
     border-radius: 0px;
     background-color:#0c1e3e;
-    border: 2px solid transparent!important;
+    border: 2px solid transparent;
+    color: #fff;
+}
+.btn-aproach_last:hover{
+    border-radius: 0px;
+    background-color:#4f6da1;
+    border: 2px solid #0c1e3e;
     color: #fff;
 }
 /* banner */
@@ -287,6 +310,11 @@ body{
 .major_portfolio {
 	padding-bottom: 0.5em;
 	border-bottom: solid 2px rgba(12,30,62,.125);
+}
+
+.card-text{
+    font-family: 'Playfair Display',Georgia,"Times New Roman",serif;
+    color: #333;
 }
 
 /* contact */
@@ -383,6 +411,7 @@ body{
     font-weight: 500;
 
 }
+
 
 
 

@@ -97,3 +97,5 @@ def contact_view(request):
     return render(request,'contact.html',context)
 def portfolio_view(request):
     return render(request,'portfolio.html',context)
+def approach_view(request):
+    return render(request,'approach.html')

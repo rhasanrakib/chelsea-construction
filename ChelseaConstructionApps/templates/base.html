@@ -31,10 +31,10 @@
         <!-- logo container -->
         <div class="container">
             <div>
-                <div id="navlogo" class="flex logo_container">
-                    <a class="flex logo_link" href="{% url 'home' %}"><img id="logo"
-                            src="{{contact_view.header_logo}}" alt=""></a>
-                </div>
+                <div>
+                    <div id="navlogo" class="flex logo_container">
+                      <div class="flex logo_link"><a id="logo" href="{% url 'home' %}"><img src="{{contact_view.header_logo}}" alt="" class="w-100"></a></div>
+                  </div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light custom_nav">
                     <span class="d-lg-none">Select Page</span>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,8 +56,8 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{% url 'about' %}#history">History</a>
-                                    <a class="dropdown-item" href="#">Our Approach</a>
-                                    <a class="dropdown-item" href="#">The Team</a>
+                                    <a class="dropdown-item" href="{% url 'approach' %}">Our Approach</a>
+                                    <a class="dropdown-item" href="{% url 'about' %}#team">The Team</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -83,6 +83,7 @@
             </div>
         </div>
     </header>
+    
     {% block container %}
 
     {% endblock container %}
@@ -133,11 +134,11 @@
                         </div>
                         <div class="pb-2">
                             <div class="table_icon">
-                                <span><a href="{{contact_view.twitter}}"><i
+                                <span><a href="{{contact_view.twitter}}" style="text-decoration: none; color: #fff;"><i
                                             class="fab fa-twitter-square cfas"></i></a></span>
                             </div>
                             <div class="table_icon">
-                                <span><a href="{{contact_view.instagram}}"><i
+                                <span><a href="{{contact_view.instagram}}" style="text-decoration: none; color: #fff;"><i
                                             class="fab fa-instagram-square cfas"></i></a></span>
                             </div>
                         </div>
@@ -200,7 +201,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
