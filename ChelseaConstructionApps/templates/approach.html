@@ -9,7 +9,7 @@
 
 <!-- banner carousel-->
 <section id="history_banner" class="history_banner"
-  style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('images/120ElginCrescent-47.jpg');">
+  style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('{{history_first_banner_pic}}');">
   <div class="container pb-5" style="padding-top: 69px;">
     <div class="pb-5">
       <h1 class="text-center welcome_header" style="color: rgb(255, 255, 255); font-size: 40px; font-weight: 500;">Our
@@ -21,95 +21,84 @@
   </div>
 </section>
 <!-- Approach -->
+<!-- Approach -->
 <section id="approach" style="background-color:transparent">
-  <div class="pt-1 pb-5">
+  <div class="container-fluid pb-5">
+    <div class="container">
+      <h2 class="text-center aproach_heading major_portfolio">Our Approach</h2>
+    </div>
     <div class="row pt-5 justify-content-center">
+      {% for i in approaches %}
       <div class="col-lg-2 col-md-4 col-sm-6">
-        <a class="pb-5" href="#">
-          <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
-            <img class="card-img-top" src="images/Icons-Chelsea-Construction-Independent-Flexible.png"
-              alt="Card image cap">
-            <div class="card-body text-center" style="padding: 0!important;">
-              <div class="pb-3 pt-4">
-                <h3 class="card-text approach_card_text">
-                  Independent & Flexible
-                </h3>
+        <div class="pb-5">
+          <a href="#">
+            <div class="card pl-lg-2 pr-lg-2" style="border: transparent;background-color: transparent;">
+              <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
+              <div class="card-body text-center" style="padding: 0!important;">
+                <div class="pb-3 pt-4">
+                  <h3 class="card-text approach_card_text">
+                    {{i.name}}
+                  </h3>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-      <div class="col-lg-2 col-md-4 col-sm-6">
-        <a class="pb-5" href="#">
-          <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
-            <img class="card-img-top" src="images/Icons-Chelsea-Construction-Attention-to-Detail.png"
-              alt="Card image cap">
-            <div class="card-body text-center" style="padding: 0!important;">
-              <div class="pb-3 pt-4">
-                <h3 class="card-text approach_card_text">
-                  Attention to Detail
-                </h3>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-sm-6">
-        <a class="pb-5" href="#">
-          <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
-            <img class="card-img-top" src="images/Icons-Chelsea-Construction-Professional.png" alt="Card image cap">
-            <div class="card-body text-center" style="padding: 0!important;">
-              <div class="pb-3 pt-4">
-                <h3 class="card-text approach_card_text">
-                  Responsible & Unobtrusive
-                </h3>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6">
-        <a class="pb-5" href="#">
-          <div class="card pl-lg-2 pr-lg-2" style="border: transparent;">
-            <img class="card-img-top" src="images/Icons-Chelsea-Construction-ResponsibleUnobtrusive.png"
-              alt="Card image cap">
-            <div class="card-body text-center" style="padding: 0!important;">
-              <div class="pb-3 pt-4">
-                <h3 class="card-text approach_card_text">
-                  Professionalism
-                </h3>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-2 col-md-4 col-sm-6">
-        <a class="pb-5" href="#">
-          <div class="card pl-lg-4" style="border: transparent;">
-            <img class="card-img-top" src="images/Icons-Chelsea-Construction-Project-Management.png"
-              alt="Card image cap">
-            <div class="card-body text-center" style="padding: 0!important;">
-              <div class="pb-3 pt-4">
-                <h3 class="card-text approach_card_text">
-                  Full Project Management Service
-                </h3>
-              </div>
-            </div>
-          </div>
-        </a>
+      {% endfor %}
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <a href="#" class="btn btn-aproach_last">Learn More</a>
       </div>
     </div>
   </div>
 </section>
+
 <!-- banner -->
 <section id="galary" style="background: transparent; padding-top: 69px;">
   <div class="row m-auto">
     <div class="col-12 p-0">
+
+      {% for i in details_approaches %}
+      
+
+      {% if forloop.counter|divisibleby:2 %}
+      <div class="row">
+        <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-10">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-4 pt-5">
+                  <img
+                    src="{{i.approach_img}}"
+                    class="w-100" alt="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center pt-4 pb-2">
+                  <h2 class="card_head_text">{{i.title}}</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 text-center pt-2 pb-3">
+                  <p class="card_text_approch">{{i.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 p-0">
+          <div
+            style="background: url('{{i.bg_image}}'); background-position: center;background-size: cover; height: 100%;">
+          </div>
+        </div>
+      </div>
+      {% else %}
       <div class="row">
         <div class="col-lg-6 p-0">
           <div
-            style="background: url('images/GavriiLux_London_20181106_112148_HR.jpg'); background-position: center;background-size: cover; height: 100%;">
+            style="background: url('{{i.bg_image}}'); background-position: center;background-size: cover; height: 100%;">
           </div>
         </div>
         <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
@@ -118,164 +107,26 @@
               <div class="row justify-content-center align-items-center">
                 <div class="col-4 pt-5">
                   <img
-                    src="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png"
+                    src="{{i.approach_img}}"
                     class="w-100" alt="">
                 </div>
               </div>
               <div class="row">
                 <div class="col-12 text-center pt-4 pb-2">
-                  <h2 class="card_head_text">Independent & Flexible</h2>
+                  <h2 class="card_head_text">{{i.title}}</h2>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12 text-center pt-2 pb-3">
-                  <p class="card_text_approch">Based in the heart of London, Chelsea Construction Company is an
-                    independent business with a commitment to quality, reliability and professionalism. Still run by its
-                    founder, we believe that any team is only as good as its members – that’s why we combine our own
-                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
-                    renovation and refurbishment services to designers, architects and homeowners alike.</p>
+                  <p class="card_text_approch">{{i.description}}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-10">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-4 pt-5">
-                  <img
-                    src="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png"
-                    class="w-100" alt="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-4 pb-2">
-                  <h2 class="card_head_text">Independent & Flexible</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-2 pb-3">
-                  <p class="card_text_approch">Based in the heart of London, Chelsea Construction Company is an
-                    independent business with a commitment to quality, reliability and professionalism. Still run by its
-                    founder, we believe that any team is only as good as its members – that’s why we combine our own
-                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
-                    renovation and refurbishment services to designers, architects and homeowners alike.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 p-0">
-          <div
-            style="background: url('images/GavriiLux_London_20181106_112148_HR.jpg'); background-position: center;background-size: cover; height: 100%;">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 p-0">
-          <div
-            style="background: url('images/GavriiLux_London_20181106_112148_HR.jpg'); background-position: center;background-size: cover; height: 100%;">
-          </div>
-        </div>
-        <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-10">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-4 pt-5">
-                  <img
-                    src="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png"
-                    class="w-100" alt="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-4 pb-2">
-                  <h2 class="card_head_text">Independent & Flexible</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-2 pb-3">
-                  <p class="card_text_approch">Based in the heart of London, Chelsea Construction Company is an
-                    independent business with a commitment to quality, reliability and professionalism. Still run by its
-                    founder, we believe that any team is only as good as its members – that’s why we combine our own
-                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
-                    renovation and refurbishment services to designers, architects and homeowners alike.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-10">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-4 pt-5">
-                  <img
-                    src="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png"
-                    class="w-100" alt="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-4 pb-2">
-                  <h2 class="card_head_text">Independent & Flexible</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-2 pb-3">
-                  <p class="card_text_approch">Based in the heart of London, Chelsea Construction Company is an
-                    independent business with a commitment to quality, reliability and professionalism. Still run by its
-                    founder, we believe that any team is only as good as its members – that’s why we combine our own
-                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
-                    renovation and refurbishment services to designers, architects and homeowners alike.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 p-0">
-          <div
-            style="background: url('images/GavriiLux_London_20181106_112148_HR.jpg'); background-position: center;background-size: cover; height: 100%;">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 p-0">
-          <div
-            style="background: url('images/GavriiLux_London_20181106_112148_HR.jpg'); background-position: center;background-size: cover; height: 100%;">
-          </div>
-        </div>
-        <div class="col-lg-6 pt-5 pb-5" style="background-color: #f3f8ff;">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-10">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-4 pt-5">
-                  <img
-                    src="https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png"
-                    class="w-100" alt="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-4 pb-2">
-                  <h2 class="card_head_text">Independent & Flexible</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 text-center pt-2 pb-3">
-                  <p class="card_text_approch">Based in the heart of London, Chelsea Construction Company is an
-                    independent business with a commitment to quality, reliability and professionalism. Still run by its
-                    founder, we believe that any team is only as good as its members – that’s why we combine our own
-                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
-                    renovation and refurbishment services to designers, architects and homeowners alike.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>

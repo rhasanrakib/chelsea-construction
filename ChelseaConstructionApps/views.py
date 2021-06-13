@@ -73,7 +73,88 @@ context = {
             },
             
         ],
-        'history_first_banner_pic':'/static/images/GavriiLux_London_20181106_123456_HR.jpg'
+        'history_first_banner_pic':'/static/images/GavriiLux_London_20181106_123456_HR.jpg',
+        'team':[
+            {
+                'image':'/static/images/andy-langridge-e1467383076913-550x550-1.jpg',
+                'name':'Andrew Langridge',
+                'designation':'Managing Director',
+                'learn_more':'''
+                <p>Andrew started in the industry as a carpenter and soon became a site manager for a large construction firm, eventually specialising in high-end refurbishments. After working on several projects, he saw an opportunity to provide bespoke building services for individual clients, designers and architects, always striving to deliver unrivalled quality.</p>
+                <p>Since then, Chelsea Construction Company has grown into a company known for their quality and ability to get to the heart of what their clients are looking for. Andrew still oversees every project, and has a hands on role in the day-today running of the business.</p>
+                '''
+            },
+            {
+                'image':'/static/images/andy-langridge-e1467383076913-550x550-1.jpg',
+                'name':'Andrew Langridge',
+                'designation':'Managing Director',
+                'learn_more':'''
+                <p>Andrew started in the industry as a carpenter and soon became a site manager for a large construction firm, eventually specialising in high-end refurbishments. After working on several projects, he saw an opportunity to provide bespoke building services for individual clients, designers and architects, always striving to deliver unrivalled quality.</p>
+                <p>Since then, Chelsea Construction Company has grown into a company known for their quality and ability to get to the heart of what their clients are looking for. Andrew still oversees every project, and has a hands on role in the day-today running of the business.</p>
+                '''
+            },
+            {
+                'image':'/static/images/andy-langridge-e1467383076913-550x550-1.jpg',
+                'name':'Andrew Langridge',
+                'designation':'Managing Director',
+                'learn_more':'''
+                <p>Andrew started in the industry as a carpenter and soon became a site manager for a large construction firm, eventually specialising in high-end refurbishments. After working on several projects, he saw an opportunity to provide bespoke building services for individual clients, designers and architects, always striving to deliver unrivalled quality.</p>
+                <p>Since then, Chelsea Construction Company has grown into a company known for their quality and ability to get to the heart of what their clients are looking for. Andrew still oversees every project, and has a hands on role in the day-today running of the business.</p>
+                '''
+            },
+        ],
+        'details_approaches':[
+            {
+                'bg_image':"/static/images/GavriiLux_London_20181106_112148_HR.jpg",
+                'approach_img':"https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png",
+                'description':'''Based in the heart of London, Chelsea Construction Company is an
+                    independent business with a commitment to quality, reliability and professionalism. Still run by its
+                    founder, we believe that any team is only as good as its members – that’s why we combine our own
+                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
+                    renovation and refurbishment services to designers, architects and homeowners alike.''',
+                'title':'Independent & Flexible',
+            },
+            {
+                'bg_image':"/static/images/GavriiLux_London_20181106_112148_HR.jpg",
+                'approach_img':"https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png",
+                'description':'''Based in the heart of London, Chelsea Construction Company is an
+                    independent business with a commitment to quality, reliability and professionalism. Still run by its
+                    founder, we believe that any team is only as good as its members – that’s why we combine our own
+                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
+                    renovation and refurbishment services to designers, architects and homeowners alike.''',
+                'title':'Independent & Flexible',
+            },
+            {
+                'bg_image':"/static/images/GavriiLux_London_20181106_112148_HR.jpg",
+                'approach_img':"https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png",
+                'description':'''Based in the heart of London, Chelsea Construction Company is an
+                    independent business with a commitment to quality, reliability and professionalism. Still run by its
+                    founder, we believe that any team is only as good as its members – that’s why we combine our own
+                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
+                    renovation and refurbishment services to designers, architects and homeowners alike.''',
+                'title':'Independent & Flexible',
+            },
+            {
+                'bg_image':"/static/images/GavriiLux_London_20181106_112148_HR.jpg",
+                'approach_img':"https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png",
+                'description':'''Based in the heart of London, Chelsea Construction Company is an
+                    independent business with a commitment to quality, reliability and professionalism. Still run by its
+                    founder, we believe that any team is only as good as its members – that’s why we combine our own
+                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
+                    renovation and refurbishment services to designers, architects and homeowners alike.''',
+                'title':'Independent & Flexible',
+            },
+            {
+                'bg_image':"/static/images/GavriiLux_London_20181106_112148_HR.jpg",
+                'approach_img':"https://www.chelsea-construction.co.uk/wp-content/uploads/2020/09/independent-and-fexible-incon-white.png",
+                'description':'''Based in the heart of London, Chelsea Construction Company is an
+                    independent business with a commitment to quality, reliability and professionalism. Still run by its
+                    founder, we believe that any team is only as good as its members – that’s why we combine our own
+                    hugely experienced craftsmen with a trusted supplier network, offering end-to-end construction,
+                    renovation and refurbishment services to designers, architects and homeowners alike.''',
+                'title':'Independent & Flexible',
+            },
+        ]
     }
 def home_view(request):
     
@@ -98,4 +179,4 @@ def contact_view(request):
 def portfolio_view(request):
     return render(request,'portfolio.html',context)
 def approach_view(request):
-    return render(request,'approach.html')
+    return render(request,'approach.html',context)

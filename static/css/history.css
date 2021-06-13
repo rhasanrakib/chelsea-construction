@@ -72,20 +72,22 @@ body {
 #team{
     padding: 35px 0;
 }
-
+#team a{
+	color: #32516F;
+}
 .meet_heading{
 	font-family: 'Playfair Display',Georgia,"Times New Roman",serif;
     font-size: 34px;
     font-weight: 600;
 }
-
+/*
 .toShow{
 	display: none;
 }
 
 .toShow.expandText .toShow{
 	display: block;
-}
+}*/
 
 #portfolio_btn{
 	background-color: #f3f8ff;
