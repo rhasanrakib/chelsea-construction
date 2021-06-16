@@ -61,15 +61,18 @@ context = {
         'portfolio':[
             {
                 'name':'Private Residence | Chelsea',
-                'image':'/static/images/120ElginCrescent-14.jpg'
+                'image':'/static/images/120ElginCrescent-14.jpg',
+                'url':'private_residence'
             },
             {
                 'name':'Private Residence | Belgravia',
-                'image':'/static/images/120ElginCrescent-14.jpg'
+                'image':'/static/images/120ElginCrescent-14.jpg',
+                'url':'private_residence'
             },
             {
                 'name':'Private Residence | Knightsbridge',
-                'image':'/static/images/120ElginCrescent-14.jpg'
+                'image':'/static/images/120ElginCrescent-14.jpg',
+                'url':'private_residence'
             },
             
         ],
@@ -180,3 +183,11 @@ def portfolio_view(request):
     return render(request,'portfolio.html',context)
 def approach_view(request):
     return render(request,'approach.html',context)
+def service_view(request):
+    return render(request,'servicelink.html',context)
+def refurbish_view(request):
+    return render(request,'service1.html',context)
+def maintenance_view(request):
+    return render(request,'service2.html',context)
+def private_residence_view(request):
+    return render(request,'private_residence.html',context)

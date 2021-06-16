@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<title>Maintenance services</title>
+{% endblock style %}
+
+{% block container %}
+
+<!-- banner carousel-->
+<section id="history_banner" class="history_banner"
+  style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('{{history_first_banner_pic}}');">
+  <div class="container pb-5" style="padding-top: 69px;">
+    <div class="pb-5">
+      <h1 class="text-center welcome_header" style="color: #fff; font-size: 40px; font-weight: 500;">Chelsea
+        Construction <br>Maintenance services</h1>
+    </div>
+  </div>
+  <div id="page_divider" style="background: transparent;">
+    <div class="et_pb_bottom_inside_divider"></div>
+  </div>
+</section>
+<!-- Approach -->
+<section id="approach" style="background-color:transparent">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="pt-1 pb-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <p class="text-center"><span
+                  style="font-size: 1.3em; font-family: 'Questrial',Helvetica,Arial,Lucida,sans-serif; color: #103356;">We
+                  offer bespoke maintenance packages tailored to the individual needs of each client. Services can
+                  include anything from adhoc repairs, boiler services and the replacement of light bulbs when required,
+                  to monthly contracts that cover all aspects of maintenance that come with running a busy home.
+                  <br><br>If you feel that we could be of some assistance, please contact us and we would be happy to
+                  discuss your individual requirements. </span></p>
+              <div class="text-center">
+                <a class="btn btn_0" href="{% url 'contact' %}">contact us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- banner -->
+<section id="banner">
+  <div class="row m-auto">
+    {% for i in banner%}
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="{{i}}" class="w-100" alt="banner">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- last card  -->
+<section style="background-color: #f3f8ff; padding-top: 54px;">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-3">
+          <div class="pt-5 pb-5">
+            <div class="pt-md-4">
+              <div class="text-center pb-2">
+                <h2>We Specialise in...</h2>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <p style="font-size: 1.3em;">all aspects of property refurbishment from demolitions and structural
+                    work through to impeccably finished joinery, marble, cornicing, flooring, specialist finishes and
+                    decorations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-lg-4 pl-0">
+          <img src="{% static 'images/GavriiLux_London_20181106_112148_HR.jpg' %}" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-lg-4 pl-0">
+          <img src="{% static 'images/GavriiLux_London_20181106_112148_HR.jpg' %}" alt="" class="w-100">
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-3">
+          <div class="pt-4 pb-4">
+            <div>
+              <div class="row">
+                <div class="col text-center pt-2">
+                  <p style="font-size: 1.3em;">
+
+                    We work with the best interior designers and architects in the industry and also have an enviable
+                    client list, with many of our customers returning in the future for additional services, which is
+                    testament to the relationships we have built over the years. <br><br>
+
+                    Please browse through our portfolio which pays homage to some of the beautiful homes we have
+                    created.
+                  </p>
+                  <div>
+                    <a class="btn btn_0" href="{% url 'portfolio' %}">view our portfolio</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock container %}

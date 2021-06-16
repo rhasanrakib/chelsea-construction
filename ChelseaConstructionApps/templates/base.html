@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{% static 'css/history.css' %}">
     <link rel="stylesheet" href="{% static 'css/approch.css' %}">
     <link rel="stylesheet" href="{% static 'css/utility.css' %}">
+    <link rel="stylesheet" href="{% static 'css/servicelink.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -52,10 +53,15 @@
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
+                                <span class="dropdown-toggle nav-link" id="navbarDropdown" >
+                                    <a href="{% url 'about' %}">About</a>
+                                </span>
+                                <!--
                                 <a class="nav-link dropdown-toggle" href="{% url 'about' %}" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     About
                                 </a>
+                                -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{% url 'about' %}#history">History</a>
                                     <a class="dropdown-item" href="{% url 'approach' %}">Our Approach</a>
@@ -63,13 +69,18 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
+                                <span class="dropdown-toggle nav-link" id="navbarDropdown" >
+                                    <a href="{% url 'service' %}">Services</a>
+                                </span>
+                                <!--
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Service
                                 </a>
+                                -->
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Refurbishment and <br>Development</a>
-                                    <a class="dropdown-item" href="#">Maintenance</a>
+                                    <a class="dropdown-item" href="{% url 'refurbish' %}">Refurbishment and <br>Development</a>
+                                    <a class="dropdown-item" href="{% url 'maintenance' %}">Maintenance</a>
                                 </div>
                             </li>
 
@@ -108,7 +119,7 @@
                 <div class="col-lg-4 col-md-12 pb-2">
                     <div class="pr-lg-5" style="color: white;">
                         <div class="pb-2">
-                            <div class="table_icon">
+                            <div class="table_icon fadeInAnimation">
                                 <span><i class="fas fa-map-marker-alt cfas"></i></span>
                             </div>
                             <div class="table_text">
@@ -118,7 +129,7 @@
                             </div>
                         </div>
                         <div class="pb-2">
-                            <div class="table_icon">
+                            <div class="table_icon fadeInAnimation">
                                 <span><i class="fas fa-phone-alt cfas"></i></span>
                             </div>
                             <div class="table_text">
@@ -126,20 +137,20 @@
                             </div>
                         </div>
                         <div class="pb-2">
-                            <div class="table_icon">
+                            <div class="table_icon fadeInAnimation">
                                 <span><i class="far fa-envelope cfas"></i></span>
                             </div>
                             <div class="table_text">
-                                <p class="contact_text"><a
+                                <p class="contact_text email-text"><a
                                         href="mailto:{{contact_view.email}}">{{contact_view.email}}</a></p>
                             </div>
                         </div>
                         <div class="pb-2">
-                            <div class="table_icon">
+                            <div class="table_icon fadeInAnimation">
                                 <span><a href="{{contact_view.twitter}}" style="text-decoration: none; color: #fff;"><i
                                             class="fab fa-twitter-square cfas"></i></a></span>
                             </div>
-                            <div class="table_icon">
+                            <div class="table_icon fadeInAnimation">
                                 <span><a href="{{contact_view.instagram}}" style="text-decoration: none; color: #fff;"><i
                                             class="fab fa-instagram-square cfas"></i></a></span>
                             </div>
@@ -184,7 +195,7 @@
                         <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
+                        <a class="nav-link" href="{% url 'service' %}">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
@@ -215,6 +226,7 @@
         crossorigin="anonymous"></script>
     <script src="{% static 'js/sticky.js' %}"></script>
     <script src="{% static 'js/jquery.imageScroll.min.js' %}"></script>
+    <script src="{% static 'js/dropdown.js' %}"></script>
     <script>
         //let labels=document.getElementsByTagName('label');
         $("label").hide();

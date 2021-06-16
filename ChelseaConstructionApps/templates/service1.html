@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<title>Refurbishment & Development</title>
+{% endblock style %}
+
+{% block container %}
+<!-- banner carousel-->
+<section id="history_banner" class="history_banner"
+  style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('{{history_first_banner_pic}}');">
+  <div class="container pb-5" style="padding-top: 69px;">
+    <div class="pb-5">
+      <h1 class="text-center welcome_header" style="color: #fff; font-size: 40px; font-weight: 500;">Refurbishment &
+        Development</h1>
+    </div>
+  </div>
+  <div id="page_divider" style="background: transparent;">
+    <div class="et_pb_bottom_inside_divider"></div>
+  </div>
+</section>
+<!-- Approach -->
+<section id="approach" style="background-color:transparent">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="pt-1 pb-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <p class="text-center"><span
+                  style="font-size: 1.3em; font-family: 'Questrial',Helvetica,Arial,Lucida,sans-serif; color: #103356;">Chelsea
+                  Construction Company can offer a full range of services to fulfil requirements for a project, ranging
+                  from </span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 justify-content-center">
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Architectural Design</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Planning Services</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Project Management</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Construction</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Interior Finishing</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-4 col-sm-6 pl-0 pr-0">
+            <div class="pb-5">
+              <div class="card pl-lg-2 pr-lg-2 pl-0 pr-0" style="border: transparent;">
+                <div class="row">
+                  <div class="col-3">
+                    <div>
+                      <span style="font-size: 35px;"><i class="fas fa-chevron-circle-right"></i></span>
+                    </div>
+                  </div>
+                  <div class="col-9 pl-0 pr-0">
+                    <div style="margin: 0 0 1em 0;"><span class="et_pb_module_header">Ongoing Maintenance</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="banner">
+  <div class="row m-auto">
+    {% for i in banner%}
+    <div class="col-12 col-md-6 col-lg-3 p-0">
+      <img src="{{i}}" class="w-100" alt="banner">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- last card  -->
+<section style="background-color: #f3f8ff; padding-top: 54px;">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-3">
+          <div class="pt-5 pb-5">
+            <div class="pt-md-4">
+              <div class="text-center pb-2">
+                <h2>We Specialise in...</h2>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <p style="font-size: 1.3em;">all aspects of property refurbishment from demolitions and structural
+                    work through to impeccably finished joinery, marble, cornicing, flooring, specialist finishes and
+                    decorations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-lg-4 pl-0">
+          <img src="{% static 'images/GavriiLux_London_20181106_112148_HR.jpg' %}" alt="" class="w-100">
+        </div>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-lg-4 pl-0">
+          <img src="{% static 'images/GavriiLux_London_20181106_112148_HR.jpg' %}" alt="" class="w-100">
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-0">
+        <div class="p-3">
+          <div class="pt-4 pb-4">
+            <div>
+              <div class="row">
+                <div class="col text-center pt-2">
+                  <p style="font-size: 1.3em;">
+
+                    We work with the best interior designers and architects in the industry and also have an enviable
+                    client list, with many of our customers returning in the future for additional services, which is
+                    testament to the relationships we have built over the years. <br><br>
+
+                    Please browse through our portfolio which pays homage to some of the beautiful homes we have
+                    created.
+                  </p>
+                  <div>
+                    <a class="btn btn_0" href="{% url 'portfolio' %}">view our portfolio</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock container %}

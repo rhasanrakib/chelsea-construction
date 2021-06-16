@@ -7,47 +7,39 @@
 
 
 {% block container %}
-
-<!-- Portfolio background-->
-<section id="history_banner" class="history_banner"
-  style="background:linear-gradient(rgba(16, 51, 86, 0.5), rgba(16, 51, 86, 0.5)), url({{history_first_banner_pic}});">
+<!-- banner carousel-->
+<section id="history_banner" class="history_banner" style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('{{history_first_banner_pic}}');">
   <div class="container pb-5" style="padding-top: 69px;">
-    <div class="pb-5">
-      <div class="text-container">
-        <h1 class="text-center welcome_header" style="color: #fff;">Portfolio</h1>
+      <div class="pb-5">
+          <h1 class="text-center welcome_header" style="color: #fff; font-size: 40px; font-weight: 500;">Portfolio</h1>
       </div>
-    </div>
   </div>
   <div id="page_divider" style="background: transparent;">
-    <div class="history_page_botom_divider"></div>
+    <div class="et_pb_bottom_inside_divider"></div>
   </div>
-</section>
+  </section>
 <!-- Portfolio -->
-<section id="portfolio">
+<section id="portfolio" style="background-color: #fff;">
   <div class="container">
-    <h2 class="text-center major_portfolio">Portfolio</h2>
-    <div class="row pt-5">
-
-      {% for i in portfolio %}
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="pb-5">
-          <div class="card">
-            <a href="#">
-              <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
-            </a>
-            <div class="card-body text-center">
-              <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;"><a href="#">{{i.name}}</a>
-              </p>
-            </div>
+      <h2 class="text-center major_portfolio">Portfolio</h2>
+      <div class="row pt-5">
+          
+          {% for i in portfolio %}
+                 
+          <div class="col-lg-4 col-md-6 col-sm-12">
+              <a class="pb-5" href="#">
+                  <div class="card">
+                      <img class="card-img-top" src="{{i.image}}" alt="{{i.name}}">
+                      <div class="card-body text-center">
+                          <p class="card-text pb-5 pt-1" style="font-size: 18px; font-weight: 500;">{{i.name}}</p>
+                      </div>
+                  </div>
+              </a>
           </div>
-        </div>
+          {% endfor %}
+           
+          
       </div>
-      {% endfor %}
-
-
-
-    </div>
   </div>
 </section>
-
 {% endblock container %}

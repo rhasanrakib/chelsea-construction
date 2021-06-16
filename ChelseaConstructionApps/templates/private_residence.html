@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    
+{% endblock style %}
+
+{% block container %}
+    <!-- banner carousel-->
+    <section id="history_banner" class="history_banner" style="background:linear-gradient(rgba(13, 17, 20, 0.5), rgba(19, 35, 51, 0.5)), url('{{history_first_banner_pic}}');">
+        <div class="container pb-5" style="padding-top: 69px;">
+            <div class="pb-5">
+                <h1 class="text-center welcome_header" style="color: #fff; font-size: 40px; font-weight: 500;"></h1>
+            </div>
+        </div>
+        <div id="page_divider" style="background: transparent;">
+            <div class="et_pb_bottom_inside_divider"></div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <section id="welcome" style="color: rgba(16, 51, 86, 0.5); padding-top: 25px;">
+        <div class="container">
+            <div>
+                <h1 class="text-center pb-4 border_bottom history_header" style="color: #0c1e3e;">Private Residence | Belgravia</h1>
+            </div>
+            <div>
+                <div class="row pt-5 justify-content-between">
+                    <div class="col-lg-6 col-12 pr-lg-0">
+                        <div class="pb-5 pr-lg-1">
+                            <div style="border-right: 6px solid #103356;">
+                                <div id="carouselPrivateResidenceControl" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        {% for i in slide %}
+                                            <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}"
+                                            style="background-image: url('{{i}}')">
+                                            <img class="d-block w-100" style="max-height: 400px;" src="{{i}}" alt="First slide">
+                                            </div>
+                                        {% endfor %}
+                                        
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselPrivateResidenceControl" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselPrivateResidenceControl" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 pl-lg-0">
+                        <div class="pb-5 pl-lg-5">
+                            <p class="history_text">Having previously worked with developers on a number of properties across the Chesham Estate, we understood the importance of delivering the project on time and on budget, whilst maintaining the absolute highest standards.</p>
+                            <p class="history_text">Over the course of the project, our own team worked closely with our network of sub-contractors to deliver a number of specialist features and finishes:</p>
+                            <div class="pl-4">
+                                <ul>
+                                    <li class="history_text">A cantilevered stone staircase</li>
+                                    <li class="history_text">Full marble bathrooms and a new kitchen</li>
+                                    <li class="history_text">AC installation</li>
+                                    <li class="history_text">Bespoke joinery, timber flooring and new windows</li>
+                                    <li class="history_text">Lutron lighting and a Creston AV system</li>
+                                    <li class="history_text">Landscaping of the rear garden</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock container %}
+  
